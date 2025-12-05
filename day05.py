@@ -18,13 +18,7 @@ def load_data(file_path):
 def part1(input_file):
 
     ranges, ids = load_data(input_file)
-
-    result = 0
-    for id in ids:
-        if is_in_ranges(id, ranges):
-            result += 1
-
-    return result
+    return sum(is_in_ranges(id, ranges) for id in ids)
 
 
 def part2(input_file):
